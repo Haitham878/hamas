@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة حماس الخيرية</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="hamas.jpg" alt="شعار المؤسسة">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="pages.html">صفحات</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><img src="fac.png" alt=""></a>
+            <a href="#"><img src="twi.png" alt=""></a>
+            <a href="#"><img src="wh.png" alt=""></a>
+        </div>
+    
+    </header>
+  
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="fan.jpg" alt="1"></div>
+                <div class="slide"><img src="wo.jpg" alt="2"></div>
+                <div class="slide"><img src="boy.jpg" alt="3"></div>
+                <div class="slide"><img src="sta.jpg" alt="4"></div>    
+            </div>
+
+            <div class="buttons">
+                <button class="button" onclick="prevSlide()">&#10094;</button>
+                <button class="button" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+
+        <section class="cards">
+            <div class="card">
+                <h3>الرؤية</h3>
+                <p>
+                    نسعى لأن نكون ركيزة أساسية في تحسين حياة سكان قطاع غزة من خلال تقديم المساعدات العاجلة والمستدامة في مجالات الغذاء، والطب، والتعليم، والإيواء، والصحة النفسية. نحن نؤمن أن المساعدات الإنسانية ليست مجرد تلبية لحاجات أساسية، بل هي سبيل نحو تحقيق الكرامة الإنسانية والإسهام في بناء مجتمع أكثر استدامة في غزة.
+                    
+                    </p>
+            </div>
+
+            
+            <div class="card">
+                <h3>الرسالة</h3>
+                <p>تقديم الدعم والمساعدة للمحتاجين.</p>
+            </div>
+           
+            <div class="card">
+                <h3>الأهداف</h3>
+                <ul>
+                    <li><strong>العدالة والتكافل:</strong> نتعهد بتوزيع المساعدات على أساس الاحتياج دون تمييز أو تفرقة.</li>
+                    <li><strong>الشفافية والمصداقية:</strong> نحرص على أن تكون عملياتنا واضحة ومفهومة لجميع المستفيدين من خدماتنا، ونسعى إلى بناء الثقة مع المجتمع المحلي والشركاء.</li>
+                    <li><strong>التعاون والشراكات:</strong> نعمل بتعاون وثيق مع منظمات دولية ومحلية أخرى لتحقيق أكبر تأثير ممكن في تحسين حياة الناس في قطاع غزة.</li>
+                    <li><strong>الاستدامة:</strong> لا نركز فقط على توفير المساعدات العاجلة، بل نسعى أيضاً إلى توفير حلول طويلة الأمد تمكّن المجتمع المحلي من تجاوز التحديات الاقتصادية والاجتماعية.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="banner">
+            <marquee direction="right" scrollamount="7" scrolldelay="10" > { ٱنفِرُوا۟ خِفَافࣰا وَثِقَالࣰا وَجَـٰهِدُوا۟ بِأَمۡوَ ٰ⁠لِكُمۡ وَأَنفُسِكُمۡ فِی سَبِیلِ ٱللَّهِۚ ذَ ٰ⁠لِكُمۡ خَیۡرࣱ لَّكُمۡ إِن كُنتُمۡ تَعۡلَمُونَ }</marquee>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="pages.html">صفحات</a></li>
+                </ul>
+            </div>
+            <div class="footer-title">
+                <h4>القائمة الرئيسية</h4>
+            </div>
+            <div class="footer-contact">
+                <p>العنوان: ...</p>
+                <p>الهاتف: 77777576</p>
+                <p>البريد الإلكتروني: m</p>
+            </div>
+        </div>
+        <p class="copyright">حقوق الطباعة والنص محفوظة...</p>
+    </footer>
+
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+            slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // تغيير الشريحة تلقائياً كل 5 ثواني
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>

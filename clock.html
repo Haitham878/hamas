@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>الساعة والعداد</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <header>
+        <div class="logo">
+            <img src="hamas.jpg" alt="شعار المؤسسة">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="pages.html">صفحات</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><img src="fac.png" alt=""></a>
+            <a href="#"><img src="twi.png" alt=""></a>
+            <a href="#"><img src="wh.png" alt=""></a>
+        </div>
+    
+    </header>
+  
+
+    <main style="text-align: center;">
+        <h1 style="font-size: 100px;">الساعة والعداد</h1>
+        <div id="clock"></div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('ar-SA');
+                document.getElementById('clock').innerText = timeString;
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
+    </main>
+
+    <footer>
+        <p>عنوان الشركة: ... - الهاتف: ... - البريد الإلكتروني: ...</p>
+    </footer>
+</body>
+</html>

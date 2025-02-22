@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحات</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px; /* الحد الأقصى للعرض */
+            margin: auto; /* توسيط الصفحة */
+            padding: 20px; /* تباعد داخلي */
+            text-align: center; /* توسيط النص */
+        }
+
+        .button {
+            display: inline-block; /* جعل الأزرار في صف */
+            margin: 10px; /* مسافة بين الأزرار */
+            padding: 15px 25px; /* تباعد داخلي */
+            font-size: 16px; /* حجم الخط */
+            color: white; /* لون النص */
+            background-color: #007bff; /* لون خلفية الزر */
+            border: none; /* إزالة الحدود */
+            border-radius: 5px; /* زوايا دائرية */
+            text-decoration: none; /* إزالة خط تحت النص */
+            transition: background-color 0.3s; /* تأثير الانتقال */
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* تغيير اللون عند التمرير */
+        }
+
+        .button-container {
+            display: flex; /* استخدام Flexbox لتنسيق الأزرار */
+            flex-wrap: wrap; /* السماح بتغليف الأزرار إلى الصف التالي */
+            justify-content: center; /* توسيط الأزرار */
+        }
+    </style>
+</head>
+<body> 
+    <header>
+    <div class="logo">
+        <img src="hamas.jpg" alt="شعار المؤسسة">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="services.html">خدماتنا</a></li>
+            <li><a href="pages.html">صفحات</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="#"><img src="fac.png" alt=""></a>
+        <a href="#"><img src="twi.png" alt=""></a>
+        <a href="#"><img src="wh.png" alt=""></a>
+    </div>
+</header>
+
+    <main>
+        <br><br><br><br><br>
+        <div class="container">
+            <h1>الصفحات المتاحة</h1>
+            <div class="button-container">
+                <a href="video.html" class="button">خلفية فيديو</a>
+                <a href="clock.html" class="button">الساعة والعداد</a>
+                <a href="gallery.html" class="button">معرض الصور</a>
+            </div>
+        </div>
+        <br><br><br>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="pages.html">صفحات</a></li>
+                </ul>
+            </div>
+            <div class="footer-title">
+                <h4>القائمة الرئيسية</h4>
+            </div>
+            <div class="footer-contact">
+                <p>العنوان: ...</p>
+                <p>الهاتف: 77777576</p>
+                <p>البريد الإلكتروني: m</p>
+            </div>
+        </div>
+        <p class="copyright">حقوق الطباعة والنص محفوظة...</p>
+    </footer>
+
+</body>
+</html>
